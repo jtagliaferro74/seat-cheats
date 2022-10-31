@@ -669,6 +669,7 @@
 			},
 			saveEditedName() {
 				this.settingsModalActive = false;
+				this.newClassNameModalActive = false;
 				this.saveClass();
 			},
 			print() {
