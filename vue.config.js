@@ -1,6 +1,3 @@
 module.exports = {
-	publicPath:
-		process.env.NODE_ENV === "production"
-			? "/seat-cheats/" // note the trailing slash
-			: "/",
+	publicPath: "/seat-cheats/",
 };
