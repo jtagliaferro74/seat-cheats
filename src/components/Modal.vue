@@ -65,6 +65,7 @@
 		background-color: rgba(0, 0, 0, 0.6);
 		z-index: 9999;
 		backdrop-filter: blur(3px);
+		font-size: 1.2rem;
 	}
 
 	.modal .modal-inner {
@@ -123,6 +124,7 @@
 	.modal-header h2 {
 		color: black;
 		margin: 0;
+		font-size: 2rem;
 	}
 
 	.modal-header .close-btn {

@@ -1,18 +1,23 @@
 <template>
 	<div class="content">
 		<div class="hero">
-			<h1>SeatCheats</h1>
-			<p>Classroom Seating Chart Manager</p>
-			<router-link to="/new">New Seating Chart</router-link>
+			<div class="heading">
+				<h1>Seat Cheats</h1>
+				<p>Classroom Seating Chart Manager</p>
+			</div>
+			<router-link class="new-btn" to="/new">New Seating Chart ➡</router-link>
 		</div>
 
 		<h2>My Charts</h2>
 		<div class="classroom-links-container">
-			<div class="classroom-link-btn" v-for="(classroom, i) in allClasses" :key="i">
-				<router-link :to="`/${i}`">
-					{{ classroom.name }}
-				</router-link>
-			</div>
+			<router-link
+				v-for="(classroom, i) in allClasses"
+				:key="i"
+				class="classroom-link-btn"
+				:to="`/${i}`"
+			>
+				{{ classroom.name }}
+			</router-link>
 		</div>
 	</div>
 	<!-- <button class="deleteAll">Delete All</button> -->
@@ -43,16 +48,37 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+	h1 {
+		font-size: 4rem;
+		margin-bottom: 0;
+	}
 	.content {
 		max-width: 1200px;
 		margin: auto;
+		font-size: 1.4em;
+	}
+	.heading {
+		margin-bottom: 3rem;
+	}
+	.hero {
+		margin-bottom: 4rem;
+	}
+
+	.new-btn {
+		background-color: #437055;
+		padding: 1rem;
+		border-radius: 20px;
+		color: white;
+	}
+	.new-btn:hover {
+		background-color: #2e503c;
 	}
 	.classroom-links-container {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
-		margin: 5rem;
-		margin-top: 0.5rem;
+		/* margin: 5rem;
+		margin-top: 0.5rem; */
 	}
 
 	.classroom-link-btn {

@@ -228,6 +228,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		/* font-family: "Avenir", Helvetica, Arial, sans-serif; */
 	}
 	.utility-container {
 		position: absolute;

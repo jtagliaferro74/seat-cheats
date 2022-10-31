@@ -1,13 +1,14 @@
 <template>
 	<div class="navbar noprint">
 		<div class="navbar-item home-link-container">
-			<router-link to="/">Home</router-link>
+			<router-link to="/">🏠 Home</router-link>
 		</div>
 		<div class="navbar-item heading-container">
 			<h1>{{ activeClass.name }}</h1>
 		</div>
 		<div class="navbar-item settings-container">
-			<select v-if="activeClass" @change="changeClass" name="" id="">
+			<label for="classSelect">🏫</label>
+			<select v-if="activeClass" @change="changeClass" name="" id="classSelect">
 				<option
 					v-for="(classroom, i) in allClasses"
 					:value="i"
@@ -21,17 +22,20 @@
 			<button @click="openSettingsModal">⚙&#xFE0F;</button>
 		</div>
 	</div>
-	<form @submit.prevent="addStudent" class="noprint">
+
+	<form @submit.prevent="addStudent" class="add-student-form noprint">
 		<div class="add-student-input">
 			<input type="text" v-model="newStudent" />
 			<button type="submit">Add Student</button>
 		</div>
 	</form>
-	<button @click="randomize">Randomize</button>
-	<button v-if="swapModeActive" type="button" @click="toggleSwapMode">End Swap</button>
-	<button v-else type="button" @click="toggleSwapMode">Swap</button>
-	<button @click="saveClass">Save</button>
-	<button type="button" @click="print">Print</button>
+	<div class="tools-container noprint">
+		<button @click="randomize">Randomize</button>
+		<button v-if="swapModeActive" type="button" @click="toggleSwapMode">End Swap</button>
+		<button v-else type="button" @click="toggleSwapMode">Swap</button>
+		<button @click="saveClass">Save</button>
+		<button type="button" @click="print">Print</button>
+	</div>
 	<!-- <button @click="increaseFontSize">+</button>
 	<button @click="decreaseFontSize">-</button> -->
 	<div class="canvas">
@@ -794,6 +798,7 @@
 		background-image: radial-gradient(black 1px, transparent 0);
 		background-size: 40px 40px;
 		background-position: -19px -19px;
+		/* font-size: 1.2rem; */
 	}
 	@page {
 		size: landscape;
@@ -838,6 +843,7 @@
 		margin-bottom: 1.5rem;
 	}
 	.modal-form-control label {
+		font-size: 1.2em;
 		margin-bottom: 0.25rem;
 	}
 
@@ -917,7 +923,9 @@
 	}
 
 	.student-icon {
-		font-size: 1.1em;
+		color: black;
+		font-family: "Avenir", Helvetica, Arial, sans-serif;
+		font-size: 1.2em;
 		position: absolute;
 		bottom: 0;
 		left: 0;
@@ -927,6 +935,10 @@
 		background: none;
 		border: none;
 		padding: 0.2rem;
+	}
+
+	.draggable-div p {
+		font-size: 1.4em;
 	}
 
 	.draggable-div:hover .lock-icon--unlocked {
@@ -964,21 +976,37 @@
 		justify-content: space-between;
 		align-items: center;
 		margin-bottom: 1rem;
+		background-color: #437055;
 	}
 
 	.navbar > .navbar-item {
 		flex: 1 1 0;
 		display: flex;
+		padding: 8px;
+		color: white;
 		/* justify-content: space-between; */
 	}
 
 	.home-link-container {
+		font-size: 1.5em;
 		justify-content: left;
 	}
 	.settings-container {
+		font-size: 1.5em;
 		justify-content: right;
 	}
 	.heading-container {
 		justify-content: center;
+	}
+	.add-student-form {
+		margin-bottom: 0.5rem;
+	}
+	.tools-container {
+		display: flex;
+		justify-content: center;
+	}
+	a {
+		color: white;
+		text-decoration: none;
 	}
 </style>
