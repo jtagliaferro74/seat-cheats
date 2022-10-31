@@ -647,6 +647,7 @@
 			},
 			closeNewClassNameModal() {
 				this.newClassNameModalActive = false;
+				this.saveEditedName();
 			},
 			openSettingsModal() {
 				this.settingsModalActive = true;
