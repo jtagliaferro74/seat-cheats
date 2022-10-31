@@ -276,9 +276,9 @@
 		/* margin: 2rem; */
 	}
 
-	.draggable-container:focus {
-		/* transform: scale(1.00002); */
-	}
+	/* .draggable-container:focus {
+		transform: scale(1.00002);
+	} */
 
 	.hand-icon {
 		font-size: 1.2em;
