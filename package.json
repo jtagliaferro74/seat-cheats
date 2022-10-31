@@ -6,7 +6,7 @@
 		"serve": "vue-cli-service serve",
 		"build": "vue-cli-service build",
 		"lint": "vue-cli-service lint",
-		"deploy": "cd dist && copy index.html 404.html && cd .. gh-pages -d dist"
+		"deploy": "cd dist && copy E:\\Work\\SeatCheats\\seat-cheats\\public\\index.html E:\\Work\\SeatCheats\\seat-cheats\\public\\404.html && cd .. gh-pages -d dist"
 	},
 	"homepage": "https://jtagliaferro74.github.io/seat-cheats",
 	"dependencies": {
