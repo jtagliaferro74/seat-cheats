@@ -8,7 +8,7 @@
 		"lint": "vue-cli-service lint",
 		"deploy": "gh-pages -d dist"
 	},
-	"homepage": "https://jtagliaferro74.github.io/seat-cheats",
+	"homepage": "https://jtagliaferro74.github.io/",
 	"dependencies": {
 		"click-outside-vue3": "^4.0.1",
 		"core-js": "^3.6.5",
