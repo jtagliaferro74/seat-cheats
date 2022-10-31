@@ -813,7 +813,7 @@
 		}
 	}
 	.selected-for-swap {
-		opacity: 70%;
+		background-color: rgb(177, 215, 250);
 	}
 	.icon-select {
 		display: flex;
