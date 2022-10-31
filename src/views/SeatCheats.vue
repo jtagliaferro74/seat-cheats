@@ -822,7 +822,7 @@
 	.icon-select button {
 		cursor: pointer;
 		padding: 0.25rem;
-		font-size: 1.1em;
+		font-size: 1em;
 
 		background: none;
 		border-radius: 0.5em;
